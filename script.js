@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const phoneNumber = '5599999999999';
         
         // Mensagem personalizada (codificada para URL)
-        const message = encodeURIComponent('Olá! Estou interessado no seu produto. Pode me dar mais informações?');
+        const message = encodeURIComponent('Olá! Gostaria de solicitar um orçamento para manutenção do meu dispositivo.');
         
         // Criar o link do WhatsApp
         const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;

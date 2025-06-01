@@ -3,181 +3,267 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Motocell - Assistência técnica especializada em smartphones e tablets. Consertos com garantia e peças originais.">
+    <meta name="theme-color" content="#1a237e">
     <title>Motocell - Assistência Técnica de Celulares e Tablets</title>
     <link rel="icon" type="image/x-icon" href="https://motocell.com.br/wp-content/uploads/2024/04/FAV-MOTOCELL.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <header class="header" role="banner">
         <div class="header-content">
             <div class="logo-container">
-                <img src="https://motocell.com.br/wp-content/uploads/2024/04/FAV-MOTOCELL.ico" alt="Motocell Logo" class="logo">
+                <a href="/" aria-label="Página inicial">
+                    <img src="https://motocell.com.br/wp-content/uploads/2024/04/FAV-MOTOCELL.ico" alt="Motocell Logo" class="logo" width="40" height="40">
+                </a>
             </div>
             <div class="header-text">
                 <h1>Motocell</h1>
                 <p class="subtitle">Assistência Técnica Especializada em Celulares e Tablets</p>
             </div>
             <div class="header-contact">
-                <a href="#" class="contact-button" id="whatsappHeader">
-                    <i class="fab fa-whatsapp"></i>
-                    Fale Conosco
+                <a href="#" class="contact-button" id="whatsappHeader" aria-label="Fale conosco pelo WhatsApp">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                    <span>Fale Conosco</span>
                 </a>
             </div>
         </div>
     </header>
 
-    <main class="main-content">
-        <section class="hero-section">
+    <main id="main-content" class="main-content" role="main">
+        <section class="hero-section" aria-labelledby="hero-title">
             <div class="hero-content">
-                <h2>Conserto de Celular com Garantia</h2>
-                <p>Seu dispositivo em boas mãos. Atendimento rápido e profissional.</p>
-                <div class="hero-buttons">
-                    <button class="primary-button" id="whatsappButton">
-                        <i class="fab fa-whatsapp"></i>
-                        Solicitar Orçamento
+                <h2 id="hero-title" class="animate-on-scroll">Conserto de Celular com Garantia</h2>
+                <p class="animate-on-scroll">Seu dispositivo em boas mãos. Atendimento rápido e profissional.</p>
+                <div class="hero-buttons animate-on-scroll">
+                    <button class="primary-button" id="whatsappButton" aria-label="Solicitar orçamento pelo WhatsApp">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        <span>Solicitar Orçamento</span>
                     </button>
-                    <a href="#services" class="secondary-button">
-                        <i class="fas fa-tools"></i>
-                        Nossos Serviços
+                    <a href="#services" class="secondary-button" aria-label="Ver nossos serviços">
+                        <i class="fas fa-tools" aria-hidden="true"></i>
+                        <span>Nossos Serviços</span>
                     </a>
                 </div>
             </div>
+            <div class="hero-image" aria-hidden="true">
+                <div class="floating-devices">
+                    <img src="https://via.placeholder.com/300" alt="" class="device-image" loading="lazy">
+                </div>
+            </div>
         </section>
 
-        <section id="services" class="services-section">
+        <section id="services" class="services-section" aria-labelledby="services-title">
             <div class="section-header">
-                <h2>Nossos Serviços</h2>
-                <p>Soluções profissionais para seu dispositivo</p>
+                <h2 id="services-title" class="animate-on-scroll">Nossos Serviços</h2>
+                <p class="animate-on-scroll">Soluções profissionais para seu dispositivo</p>
             </div>
             
             <div class="service-cards">
-                <div class="service-card">
+                <article class="service-card animate-on-scroll">
                     <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-mobile-alt" aria-hidden="true"></i>
                     </div>
                     <h3>Troca de Tela</h3>
                     <p>Consertamos telas quebradas com peças originais e garantia</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Peças originais</li>
-                        <li><i class="fas fa-check"></i> Garantia no serviço</li>
-                        <li><i class="fas fa-check"></i> Reparo no mesmo dia</li>
+                    <ul class="service-features" role="list">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Peças originais</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Garantia no serviço</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Reparo no mesmo dia</li>
                     </ul>
-                </div>
+                    <button class="service-cta" aria-label="Solicitar orçamento para troca de tela" onclick="scrollToContact()">
+                        Solicitar Orçamento
+                    </button>
+                </article>
 
-                <div class="service-card">
+                <article class="service-card animate-on-scroll" data-delay="200">
                     <div class="service-icon">
-                        <i class="fas fa-battery-full"></i>
+                        <i class="fas fa-battery-full" aria-hidden="true"></i>
                     </div>
                     <h3>Troca de Bateria</h3>
                     <p>Baterias novas e originais para seu dispositivo</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Baterias certificadas</li>
-                        <li><i class="fas fa-check"></i> Maior durabilidade</li>
-                        <li><i class="fas fa-check"></i> Instalação rápida</li>
+                    <ul class="service-features" role="list">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Baterias certificadas</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Maior durabilidade</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Instalação rápida</li>
                     </ul>
-                </div>
+                    <button class="service-cta" aria-label="Solicitar orçamento para troca de bateria" onclick="scrollToContact()">
+                        Solicitar Orçamento
+                    </button>
+                </article>
 
-                <div class="service-card">
+                <article class="service-card animate-on-scroll" data-delay="400">
                     <div class="service-icon">
-                        <i class="fas fa-microchip"></i>
+                        <i class="fas fa-microchip" aria-hidden="true"></i>
                     </div>
                     <h3>Problemas no Sistema</h3>
                     <p>Resolução de travamentos e lentidão do aparelho</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Diagnóstico preciso</li>
-                        <li><i class="fas fa-check"></i> Backup dos dados</li>
-                        <li><i class="fas fa-check"></i> Sistema otimizado</li>
+                    <ul class="service-features" role="list">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Diagnóstico preciso</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Backup dos dados</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Sistema otimizado</li>
                     </ul>
-                </div>
+                    <button class="service-cta" aria-label="Solicitar orçamento para problemas no sistema" onclick="scrollToContact()">
+                        Solicitar Orçamento
+                    </button>
+                </article>
             </div>
         </section>
 
-        <section class="benefits-section">
+        <section class="benefits-section" aria-labelledby="benefits-title">
             <div class="section-header">
-                <h2>Por que escolher a Motocell?</h2>
-                <p>Excelência e qualidade em cada reparo</p>
+                <h2 id="benefits-title" class="animate-on-scroll">Por que escolher a Motocell?</h2>
+                <p class="animate-on-scroll">Excelência e qualidade em cada reparo</p>
             </div>
 
             <div class="benefits-grid">
-                <div class="benefit-item">
-                    <i class="fas fa-user-tie"></i>
+                <div class="benefit-item animate-on-scroll">
+                    <i class="fas fa-user-tie" aria-hidden="true"></i>
                     <h3>Técnicos Especializados</h3>
-                    <p>Equipe treinada pela fábrica</p>
+                    <p>Equipe altamente qualificada e certificada</p>
                 </div>
-                <div class="benefit-item">
-                    <i class="fas fa-bolt"></i>
+                <div class="benefit-item animate-on-scroll" data-delay="200">
+                    <i class="fas fa-bolt" aria-hidden="true"></i>
                     <h3>Atendimento Rápido</h3>
-                    <p>96% dos nossos serviços são executados em apenas 2 horas </p>
+                    <p>Maioria dos serviços feitos no mesmo dia</p>
                 </div>
-                <div class="benefit-item">
-                    <i class="fas fa-shield-alt"></i>
+                <div class="benefit-item animate-on-scroll" data-delay="400">
+                    <i class="fas fa-shield-alt" aria-hidden="true"></i>
                     <h3>Garantia Total</h3>
-                    <p>Todos os serviços possuem garantia em 3 e 6 meses</p>
+                    <p>Todos os serviços com garantia</p>
                 </div>
-                <div class="benefit-item">
-                    <i class="fas fa-dollar-sign"></i>
+                <div class="benefit-item animate-on-scroll" data-delay="600">
+                    <i class="fas fa-dollar-sign" aria-hidden="true"></i>
                     <h3>Preço Justo</h3>
                     <p>Melhor custo-benefício da região</p>
                 </div>
             </div>
         </section>
 
-        <section class="faq-section">
+        <section class="process-section" aria-labelledby="process-title">
             <div class="section-header">
-                <h2>Dúvidas Frequentes</h2>
-                <p>Tudo que você precisa saber sobre nossos serviços</p>
+                <h2 id="process-title" class="animate-on-scroll">Como Funciona</h2>
+                <p class="animate-on-scroll">Processo simples e transparente</p>
             </div>
 
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3><i class="fas fa-clock"></i> Quanto tempo leva o reparo?</h3>
-                    <p>A maioria dos serviços é realizada em até 1 hora, dependendo da complexidade do problema.</p>
+            <div class="process-steps">
+                <div class="process-step animate-on-scroll">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-comments" aria-hidden="true"></i>
+                    <h3>Entre em Contato</h3>
+                    <p>Fale conosco pelo WhatsApp para um diagnóstico inicial</p>
                 </div>
-                <div class="faq-item">
-                    <h3><i class="fas fa-shield-alt"></i> Tem garantia?</h3>
-                    <p>Sim! Oferecemos garantia em todos os nossos serviços e peças.</p>
+                <div class="process-step animate-on-scroll" data-delay="200">
+                    <div class="step-number">2</div>
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <h3>Diagnóstico</h3>
+                    <p>Avaliamos seu dispositivo e enviamos um orçamento detalhado</p>
                 </div>
-                <div class="faq-item">
-                    <h3><i class="fas fa-database"></i> Perco meus dados?</h3>
-                    <p>Não! Realizamos o reparo mantendo todos os seus dados intactos.</p>
+                <div class="process-step animate-on-scroll" data-delay="400">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-tools" aria-hidden="true"></i>
+                    <h3>Reparo</h3>
+                    <p>Realizamos o conserto com peças originais</p>
                 </div>
-                <div class="faq-item">
-                    <h3><i class="fas fa-tools"></i> Usam peças originais?</h3>
-                    <p>Sim, trabalhamos apenas com peças originais e de alta qualidade.</p>
+                <div class="process-step animate-on-scroll" data-delay="600">
+                    <div class="step-number">4</div>
+                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                    <h3>Garantia</h3>
+                    <p>Entregamos seu dispositivo funcionando com garantia</p>
                 </div>
             </div>
         </section>
 
-        <section class="cta-section">
+        <section class="testimonials-section" aria-labelledby="testimonials-title">
+            <div class="section-header">
+                <h2 id="testimonials-title" class="animate-on-scroll">O que nossos clientes dizem</h2>
+                <p class="animate-on-scroll">Avaliações reais de clientes satisfeitos</p>
+            </div>
+
+            <div class="testimonials-slider" role="region" aria-label="Depoimentos de clientes">
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                    </div>
+                    <p class="testimonial-text">"Excelente atendimento! Consertaram meu celular no mesmo dia e o preço foi justo."</p>
+                    <p class="testimonial-author">Maria Silva</p>
+                </div>
+                <!-- Adicione mais cartões de depoimentos conforme necessário -->
+            </div>
+        </section>
+
+        <section id="faq" class="faq-section" aria-labelledby="faq-title">
+            <div class="section-header">
+                <h2 id="faq-title" class="animate-on-scroll">Dúvidas Frequentes</h2>
+                <p class="animate-on-scroll">Tudo que você precisa saber sobre nossos serviços</p>
+            </div>
+
+            <div class="faq-grid">
+                <details class="faq-item animate-on-scroll">
+                    <summary><i class="fas fa-clock" aria-hidden="true"></i> Quanto tempo leva o reparo?</summary>
+                    <p>A maioria dos serviços é realizada em até 1 hora, dependendo da complexidade do problema.</p>
+                </details>
+
+                <details class="faq-item animate-on-scroll" data-delay="200">
+                    <summary><i class="fas fa-shield-alt" aria-hidden="true"></i> Tem garantia?</summary>
+                    <p>Sim! Oferecemos garantia em todos os nossos serviços e peças.</p>
+                </details>
+
+                <details class="faq-item animate-on-scroll" data-delay="400">
+                    <summary><i class="fas fa-database" aria-hidden="true"></i> Perco meus dados?</summary>
+                    <p>Não! Realizamos o reparo mantendo todos os seus dados intactos.</p>
+                </details>
+
+                <details class="faq-item animate-on-scroll" data-delay="600">
+                    <summary><i class="fas fa-tools" aria-hidden="true"></i> Usam peças originais?</summary>
+                    <p>Sim, trabalhamos apenas com peças originais e de alta qualidade.</p>
+                </details>
+            </div>
+        </section>
+
+        <section class="cta-section" aria-labelledby="cta-title">
             <div class="cta-content">
-                <h2>Precisa de ajuda com seu dispositivo?</h2>
-                <p>Entre em contato agora e receba um diagnóstico gratuito!</p>
-                <button class="primary-button" id="whatsappButtonCta">
-                    <i class="fab fa-whatsapp"></i>
-                    Falar com Especialista
+                <h2 id="cta-title" class="animate-on-scroll">Precisa de ajuda com seu dispositivo?</h2>
+                <p class="animate-on-scroll">Entre em contato agora e receba um diagnóstico gratuito!</p>
+                <button class="primary-button animate-on-scroll" id="whatsappButtonCta" aria-label="Falar com especialista pelo WhatsApp">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                    <span>Falar com Especialista</span>
                 </button>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="footer-content">
             <div class="footer-info">
-                <img src="https://motocell.com.br/wp-content/uploads/2024/04/FAV-MOTOCELL.ico" alt="Motocell Logo" class="footer-logo">
+                <img src="https://motocell.com.br/wp-content/uploads/2024/04/FAV-MOTOCELL.ico" alt="Motocell Logo" class="footer-logo" width="60" height="60" loading="lazy">
                 <p>Assistência técnica especializada em smartphones e tablets.</p>
             </div>
             <div class="footer-hours">
-                <h3><i class="far fa-clock"></i> Horário de Funcionamento</h3>
+                <h3><i class="far fa-clock" aria-hidden="true"></i> Horário de Funcionamento</h3>
                 <p>Segunda a Sexta: 9h às 18h</p>
                 <p>Sábado: 9h às 13h</p>
             </div>
             <div class="footer-contact">
-                <h3><i class="fas fa-phone-alt"></i> Contato</h3>
-                <p>WhatsApp: (XX) XXXXX-XXXX</p>
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <h3><i class="fas fa-phone-alt" aria-hidden="true"></i> Contato</h3>
+                <p>WhatsApp: <a href="#" id="whatsappFooter" aria-label="Nosso número de WhatsApp">(XX) XXXXX-XXXX</a></p>
+                <div class="social-links" role="list">
+                    <a href="#" class="social-link" aria-label="Siga-nos no Facebook">
+                        <i class="fab fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Siga-nos no Instagram">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -185,6 +271,10 @@
             <p>&copy; 2024 Motocell - Assistência Técnica. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>

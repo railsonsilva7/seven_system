@@ -171,6 +171,18 @@ h3 {
     margin: 0.5rem 0;
 }
 
+.logo-container {
+    margin-bottom: 1rem;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .header {
